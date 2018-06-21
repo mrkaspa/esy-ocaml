@@ -20,13 +20,15 @@
     "@esy-ocaml/esy-installer": "^0.0.0",
     "@opam/jbuilder": "^1.0.0-beta14",
     "@opam/lambda-term": "^1.11.0",
-    "@opam/lwt": "4.0.0"
+    "@opam/lwt": "4.0.0",
+    "@opam/csv": "2.0.0",
+    "@opam/core": "^100000000.11.1"
   },
   "peerDependencies": {
-    "ocaml": "~4.2.3000"
+    "ocaml": "~4.6.1"
   },
   "devDependencies": {
     "@opam/merlin": "^3.0.3",
-    "ocaml": "~4.2.3000"
+    "ocaml": "~4.6.1"
   }
 }

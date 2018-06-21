@@ -1,6 +1,4 @@
-(jbuild_version 1)
-
-(executable
- ((name hello)
-  (public_name hello)
-  (libraries (lib))))
+(executables (
+  (names (hello csv_bin))
+  (public_names (hello csv_bin))
+  (libraries (lib core csv))))
