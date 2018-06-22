@@ -22,12 +22,10 @@ let embedded_csv =
    \"travel.agents.adwords\",\"358\",\"1.1\"\n\
    \"promo.home.topX.SSH.366\",\"310\",\"0.9\""
 
-
 let csvs =
   List.map
     (fun name -> (name, Csv.load name))
     ["examples/example1.csv"; "examples/example2.csv"]
-
 
 let sum_percentage csv =
   let open Core in
@@ -37,7 +35,6 @@ let sum_percentage csv =
         | Some perc -> ( try Float.of_string perc +. acc with _ -> acc )
         | None -> acc )
     csv 0.0
-
 
 let () =
   let ecsv = Csv.input_all (Csv.of_string embedded_csv) in
