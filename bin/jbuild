@@ -1,4 +1,2 @@
-(executables (
-  (names (csv_bin))
-  (public_names (csv_bin))
-  (libraries (lib core csv))))
+;; executables
+     (names csv_bin (public_names csv_bin) (libraries (lib core csv)))
