@@ -35,14 +35,14 @@ let get_path () = match Sys.argv with [|_; path|] -> Some path | _ -> None
 let () =
   get_path ()
   |> Option.bind ~f:(fun path ->
-         print_string $ "Reading file " ^ path ^ "\n" ;
-         Some (read_file path) )
+      print_string $ "Reading file " ^ path ^ "\n" ;
+      Some (read_file path) )
   |> Option.bind ~f:(fun csv ->
-         printf "Result---CSV---------------------------------\n" ;
-         List.iter
-           ~f:(fun (zona, hub, price) ->
-             print_string $ zona ^ "," ^ hub ^ "," ^ string_of_int price ^ "\n"
-             )
-           csv
-         |> ignore |> Option.some )
+      printf "Result---CSV---------------------------------\n" ;
+      List.iter
+        ~f:(fun (zona, hub, price) ->
+            print_string $ zona ^ "," ^ hub ^ "," ^ string_of_int price ^ "\n"
+          )
+        csv
+      |> ignore |> Option.some )
   |> ignore
