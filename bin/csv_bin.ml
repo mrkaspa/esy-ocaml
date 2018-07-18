@@ -44,5 +44,5 @@ let () =
             print_string $ zona ^ "," ^ hub ^ "," ^ string_of_int price ^ "\n"
           )
         csv
-      |> ignore |> Option.some )
+      |> Option.some )
   |> ignore
