@@ -4,12 +4,12 @@
   "description": "OCaml workflow with Esy",
   "license": "MIT",
   "esy": {
-    "build": "dune build"
-    // "release": {
-    //   "releasedBinaries": [
-    //     "csv"
-    //   ]
-    // }
+    "build": "dune build",
+    "release": {
+      "releasedBinaries": [
+        "Csv_bin"
+      ]
+    }
   },
   "dependencies": {
     "@opam/dune": "*",
