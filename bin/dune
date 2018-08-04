@@ -1,0 +1,4 @@
+(executable
+  (name Csv_bin)
+  (public_name Csv_bin)
+  (libraries lib core csv))
