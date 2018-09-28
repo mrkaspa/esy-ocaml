@@ -24,7 +24,9 @@ let getFromMap map =
   , get_key "hub" map
   , get_key "precio_normal" map |> int_of_string )
 
-let csv_transform = getFromMap << String.Map.of_alist_exn << Csv.Row.to_assoc
+let csv_transform_rev = getFromMap << String.Map.of_alist_exn << Csv.Row.to_assoc
+
+let csv_transform = Csv.Row.to_assoc >> String.Map.of_alist_exn >> getFromMap
 
 let read_file path =
   let csv = Csv.Rows.load ~has_header:true ~header:headers path in
